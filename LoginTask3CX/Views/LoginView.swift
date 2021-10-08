@@ -13,23 +13,23 @@ struct LoginView: View {
     @ObservedObject var viewModel = LoginViewModel()
     
     var loginButton: some View {
-        {
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    Text("Login").foregroundColor(.white).fontWeight(.bold)
-                    Spacer()
+        
+        VStack(alignment: .center, spacing: 10, content: {
+                Button("Sign Up") {
+                    viewModel.singUp()
                 }
-                Spacer()
-            }.frame(minHeight: 55.0, maxHeight: 55.0)
-                .background(Color.black)
+//                .foregroundColor(Color.white)
+                .frame(minWidth: 0, maxWidth: .infinity , minHeight: 30 , maxHeight: 30)
+                .padding(.all , 20.0)
+//                .background(Color.black)
                 .cornerRadius(10)
-                .padding(.top, 77.0)
-            
-        }().simultaneousGesture(TapGesture().onEnded{
-            self.loginUser()
-        })
+
+                .disabled(!viewModel.buttonIsEnable)
+
+
+            }
+        )
+
     }
     
     var placeHolderTextView: some View {
@@ -54,25 +54,36 @@ struct LoginView: View {
             Text("3CX APP ").fontWeight(.bold)
         }.padding(EdgeInsets(top: 44.0, leading: .zero, bottom: .zero, trailing: .zero))
     }
+    var warningView : some View {
+        VStack(alignment: .center, spacing: 5) {
+            Text(viewModel.warningMessage)
+                .foregroundColor(Color(viewModel.textColor))
+        }
+    }
     
     var body: some View {
-        NavigationView {
-            LoadingView(isShowing: .constant(false)) {
-                VStack(alignment: .leading) {
-                    self.titleView
-                    self.placeHolderTextView
-                    self.passwordTextView
-                    self.passwordConfirmTextView
-                    self.loginButton
-                    Spacer()
-                    Spacer()
-                }.padding(22.0)
+        HStack {
+            NavigationView {
+                LoadingView(isShowing: .constant(false)) {
+                    VStack(alignment: .leading) {
+                        self.titleView
+                        self.placeHolderTextView
+                        self.passwordTextView
+                        self.passwordConfirmTextView
+                        self.warningView
+                        self.loginButton
+                        Spacer()
+                        Spacer()
+                    }.padding(22.0)
+                }
             }
+            
         }
     
     }
     
     private func loginUser() {
+        viewModel.singUp()
     }
 }
 
