@@ -11,6 +11,11 @@
 		F2AAE9F827102D150022611F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAE9F727102D150022611F /* ContentView.swift */; };
 		F2AAE9FA27102D160022611F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AAE9F927102D160022611F /* Assets.xcassets */; };
 		F2AAE9FD27102D160022611F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AAE9FC27102D160022611F /* Preview Assets.xcassets */; };
+		F2AAEA0A271033E10022611F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEA09271033E10022611F /* LoginView.swift */; };
+		F2AAEA0C271036530022611F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEA0B271036530022611F /* LoginViewModel.swift */; };
+		F2AAEA10271036DB0022611F /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEA0F271036DB0022611F /* LoadingView.swift */; };
+		F2AAEA13271037010022611F /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEA12271037010022611F /* LoadingIndicator.swift */; };
+		F2AAEA15271037100022611F /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAEA14271037100022611F /* TextFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		F2AAE9F727102D150022611F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2AAE9F927102D160022611F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2AAE9FC27102D160022611F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2AAEA09271033E10022611F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F2AAEA0B271036530022611F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F2AAEA0F271036DB0022611F /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F2AAEA12271037010022611F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		F2AAEA14271037100022611F /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +61,12 @@
 		F2AAE9F427102D150022611F /* LoginTask3CX */ = {
 			isa = PBXGroup;
 			children = (
-				F2AAE9F527102D150022611F /* LoginTask3CXApp.swift */,
-				F2AAE9F727102D150022611F /* ContentView.swift */,
-				F2AAE9F927102D160022611F /* Assets.xcassets */,
+				F2AAEA032710327B0022611F /* Main */,
+				F2AAEA04271032DB0022611F /* Model */,
+				F2AAEA05271032E10022611F /* Utilities */,
+				F2AAEA06271032ED0022611F /* ViewModels */,
+				F2AAEA07271032F90022611F /* Views */,
+				F2AAEA08271033040022611F /* Resources */,
 				F2AAE9FB27102D160022611F /* Preview Content */,
 			);
 			path = LoginTask3CX;
@@ -65,6 +78,64 @@
 				F2AAE9FC27102D160022611F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F2AAEA032710327B0022611F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAE9F527102D150022611F /* LoginTask3CXApp.swift */,
+				F2AAE9F727102D150022611F /* ContentView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F2AAEA04271032DB0022611F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F2AAEA05271032E10022611F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F2AAEA06271032ED0022611F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAEA0B271036530022611F /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F2AAEA07271032F90022611F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAEA0D271036AB0022611F /* ReusableViews */,
+				F2AAEA09271033E10022611F /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2AAEA08271033040022611F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAE9F927102D160022611F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2AAEA0D271036AB0022611F /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				F2AAEA0F271036DB0022611F /* LoadingView.swift */,
+				F2AAEA12271037010022611F /* LoadingIndicator.swift */,
+				F2AAEA14271037100022611F /* TextFields.swift */,
+			);
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AAEA13271037010022611F /* LoadingIndicator.swift in Sources */,
+				F2AAEA0C271036530022611F /* LoginViewModel.swift in Sources */,
+				F2AAEA0A271033E10022611F /* LoginView.swift in Sources */,
 				F2AAE9F827102D150022611F /* ContentView.swift in Sources */,
+				F2AAEA10271036DB0022611F /* LoadingView.swift in Sources */,
+				F2AAEA15271037100022611F /* TextFields.swift in Sources */,
 				F2AAE9F627102D150022611F /* LoginTask3CXApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
